@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/st/Nuxt/nuxt-practice/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_3f5e805f"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/st/Nuxt/nuxt-practice/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7ddedcd2"
+  }
+]
