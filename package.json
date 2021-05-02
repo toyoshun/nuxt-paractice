@@ -9,8 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/firebase": "^7.5.0",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "firebase": "^8.4.1",
+    "nuxt": "^2.15.3",
+    "nuxt-typed-vuex": "^0.1.22"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",

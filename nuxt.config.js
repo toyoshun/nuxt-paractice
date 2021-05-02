@@ -38,11 +38,12 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // https://typed-vuex.roe.dev
+    'nuxt-typed-vuex',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -67,5 +68,5 @@ export default {
   build: {
   },
 
-  srcDir: 'src/'
+  srcDir: 'src'
 }

@@ -3,12 +3,35 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/st/Nuxt/nuxt-practice/src/pages/inspire.vue",
-    "chunkName": "pages/inspire"
+    "chunkName": "pages/inspire",
+    "_name": "_2d42f4f4"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/st/Nuxt/nuxt-practice/src/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_8a2a6afa"
+  },
+  {
+    "name": "resister",
+    "path": "/resister",
+    "component": "/Users/st/Nuxt/nuxt-practice/src/pages/resister.vue",
+    "chunkName": "pages/resister",
+    "_name": "_1ab22e26"
+  },
+  {
+    "name": "update",
+    "path": "/update",
+    "component": "/Users/st/Nuxt/nuxt-practice/src/pages/update.vue",
+    "chunkName": "pages/update",
+    "_name": "_08d40bc2"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/st/Nuxt/nuxt-practice/src/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_1d79b128"
   }
 ]

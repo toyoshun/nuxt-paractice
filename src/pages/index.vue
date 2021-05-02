@@ -4,6 +4,7 @@
       <div class="text-center">
         <logo />
         <vuetify-logo />
+        <h1 class="title">Hello, {{$accessor.user.name}}</h1>
       </div>
       <v-card>
         <v-card-title class="headline">
@@ -85,6 +86,7 @@ export default Vue.extend({
   components: {
     Logo,
     VuetifyLogo
-  }
+  },
+  middleware: ["auth-filter"],
 })
 </script>
