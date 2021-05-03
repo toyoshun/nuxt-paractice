@@ -1,3 +1,4 @@
 # .cacheディレクトリとその中身を除外する
 .cache/
+node_modules .nuxt dist
 node_modules
