@@ -8,7 +8,6 @@ export const Provider = {
 } as const;
 type Provider = typeof Provider[keyof typeof Provider];
 
-
 export class Firebase {
   private $accessor: typeof accessorType;
 
@@ -25,7 +24,7 @@ export class Firebase {
         measurementId: "G-8G41CRZ1BH",
       };
 
-    //   firebase初期化
+      //   firebase初期化
       firebase.initializeApp(config);
     }
   }
@@ -82,10 +81,10 @@ export class Firebase {
       });
   }
 
-// Todo  単一取得、複数取得などを作る
+  // Todo  単一取得、複数取得などを作る
   getData(id: string) {
     console.log(id);
-    const db = firebase.firestore()
+    const db = firebase.firestore();
     let docUsers = db.collection("users").doc(id);
     docUsers
       .get()
@@ -95,31 +94,51 @@ export class Firebase {
         )
       );
   }
-  /*
-     * ドキュメント削除
-     */
-  deleteUser(docId: string) {
-    const db = firebase.firestore()
-    db.collection("users").doc(docId).delete().then(() => {
-      //success
-    })
-    .catch((error) => {
-      //error
-    })
+
+  getList() {
+    const db = firebase.firestore();
+    db.collection("users")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          this.$accessor.userList.pushName(doc.data().name);
+          // console.log(this.$accessor.userList);
+          // console.log(doc.data().name);
+        });
+      });
   }
-  
+
+  /*
+   * ドキュメント削除
+   */
+  deleteUser(docId: string) {
+    const db = firebase.firestore();
+    db.collection("users")
+      .doc(docId)
+      .delete()
+      .then(() => {
+        //success
+      })
+      .catch((error) => {
+        //error
+      });
+  }
+
   /*
    * ドキュメント更新
    */
   updateUser(docId: string) {
-    const db = firebase.firestore()
-    db.collection("users").doc(docId).update({
-      name: 'Mike',
-    }).then(() => {
-      //success
-    })
-    .catch((error) => {
-      //error
-    })
+    const db = firebase.firestore();
+    db.collection("users")
+      .doc(docId)
+      .update({
+        name: "Mike",
+      })
+      .then(() => {
+        //success
+      })
+      .catch((error) => {
+        //error
+      });
   }
 }

@@ -21,6 +21,7 @@ let store = {};
 
   resolveStoreModules(require('../src/store/user.ts'), 'user.ts')
   resolveStoreModules(require('../src/store/userInfo.ts'), 'userInfo.ts')
+  resolveStoreModules(require('../src/store/userList.ts'), 'userList.ts')
 
   // If the environment supports hot reloading...
 
@@ -30,6 +31,7 @@ let store = {};
       '../src/store/index.ts',
       '../src/store/user.ts',
       '../src/store/userInfo.ts',
+      '../src/store/userList.ts',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

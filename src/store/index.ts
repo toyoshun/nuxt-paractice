@@ -2,6 +2,7 @@ import { getAccessorType } from 'typed-vuex'
 
 import * as user from '~/store/user'
 import * as userInfo from '~/store/userInfo'
+import * as userList from '~/store/userList'
 
 export const state = () => ({})
 export const getters = {}
@@ -16,5 +17,6 @@ export const accessorType = getAccessorType({
     modules: {
         user,
         userInfo,
+        userList
     },
 })
