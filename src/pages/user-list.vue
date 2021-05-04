@@ -1,31 +1,26 @@
 <template>
- <div class="page">
-   <button
-     type="button"
-     @click="getUserList"
-   >
-     getUserList
-   </button>
-   <p v-for="(userName,index) in $accessor.userList.list" :key="index">{{ userName }}</p>
- </div>
+  <div class="page">
+    <button type="button" @click="getUserList">getUserList</button>
+    <p v-for="(userName, index) in $accessor.userList.list" :key="index">
+      {{ userName }}
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Firebase } from '~/services/firebase'
+import { Vue, Component } from "nuxt-property-decorator";
+import { Firebase } from "~/services/firebase";
 
-export default Vue.extend({
- data () {
-   return {
-    //  farebaseインスタンス
-     fire: new Firebase(this.$accessor)
-   }
- },
- methods: {
-  //  dbから取得
-   async getUserList () {
-     this.fire.getList();
-   }
- },
-});
+@Component
+export default class UserList extends Vue {
+  fire: Firebase = new Firebase(this.$accessor);
+
+  getUserList() {
+    this.fire.getList();
+  }
+
+  // get fullName(): string {
+  //   return `${this.user.firstName} ${this.user.lastName}`;
+  // }
+}
 </script>
